@@ -1,0 +1,19 @@
+<% include header %>
+
+<h1><%= title %></h1>
+<table>
+	<% posts.forEach(function(item) { %>
+    	<tr>
+    		<td>
+    			<h1><%= item.name %></h1>
+    			<div><%= item.content %></div>
+    		</td>
+    		<td>
+    			<a href="/edit/<%= item._id %>">Edit</a>
+    		</td>
+    	</tr>
+	<% }) %>
+</table>
+<a href="/create">Create post</a>
+
+<% include footer %>
